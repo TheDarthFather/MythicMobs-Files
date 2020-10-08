@@ -30,7 +30,7 @@ MeteorEnd:
 FarBlind:
   Cooldown: 20
   Conditions:
-  - targetdistance 10-50
+  - targetnotwithin 10
   - offgcd
   Skills:
   - message{m="<mob.name>&e blinds you for not fighting it close up!"} @PlayersInRing{min=10;max=50}
@@ -43,9 +43,9 @@ Stealth:
   - targetwithin 30
   Skills:
   - message{m="<mob.name>&e fades away."} @target
-  - potionself INVISIBILITY:200:1 >0 1
-  - potionself INCREASE_DAMAGE:200:3 >0 1
-  - effect boss particles largesmoke:1:1:25:1:0.5 >0 1
+  - potion INVISIBILITY:200:1 >0 1
+  - potion INCREASE_DAMAGE:200:3 >0 1
+  - effect:Smoke @self
   
 Bleeding:
   Cooldown: 1
@@ -72,7 +72,7 @@ Charge:
   - targetinlineofsight true
   Skills:
   - message{m="<mob.name>&e charges toward <target.name>."} @target
-  - effect boss particle crit:1:1:250:2:0 >0 1
+  - effect:Flames @self
   - potion{type=SPEED;duration=20;level=5} @self
   
 Flurry:
@@ -94,11 +94,11 @@ Sharpen:
   Cooldown: 1
   Skills:
   - message{m="<mob.name>&e begins sharpening its weapon."} @target
-  - effect boss sound random.break 1:1 >0 1
-  - effect boss particles crit:1:1:250:0.1 >0 1
-  - potionself SLOW:40:7
+  - sound{s=entity.item.break} @self
+  - effect:Flames @self
+  - potion SLOW:40:7
   - delay 40
-  - effect boss sound random.break 1:1 >0 1
-  - effect boss particles crit:1:1:250:0.1 >0 1
-  - potionself INCREASE_DAMAGE:160:3 >0 1
-  - potionself SPEED:160:3 >0 1
+  - sound{s=entity.item.break} @self
+  - effect:Flames @self
+  - potion INCREASE_DAMAGE:160:3 >0 1
+  - potion SPEED:160:3 >0 1

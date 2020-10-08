@@ -1,8 +1,0 @@
-OTElderGuardian:
-  Type: ELDER_GUARDIAN
-  Health: 80
-  Damage: 12
-OTGuardian:
-  Type: Guardian
-  Health: 30
-  Damage: 9

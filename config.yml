@@ -1,17 +1,18 @@
-#
-# CONFIGURATION INFORMATION AVAILABLE AT: http://xikage.elseland.net/mythicmobs/
-
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
 Configuration:
-  Version: 2.3
+  Version: 4.9
   General:
     AllowMetrics: true
     CheckForUpdates: true
     CompatibilityMode: false
     DebugLevel: 0
     ErrorLogging: true
+    Language: enUS
     UseVolatileFeatures: true
   Clock:
-    ClockInterval: 5
+    ClockInterval: 1
     SaveInterval: 5
     SpawnsInterval: 2
     ScannerInterval: 10
@@ -20,15 +21,14 @@ Configuration:
     CustomSpawners: true
     RandomSpawning: true
   Mobs:
+    DespawnByDefault: true
     EnableAIModifiers: true
     EnableTimerSkills: true
     EnableThreatTables: true
     EnablePlayerFactions: true
-    EnableLegacySkills: true
+    EnableLegacySkills: false
     KillMessagePrefix: ''
-    ShowHealth:
-      Radius: 25
-      Format: <mob.name> - <mob.php> (<mob.hp> / <mob.mhp>)
+    PreventOtherDropsByDefault: false
     Scaling:
       Default:
         Enabled: true
@@ -39,6 +39,9 @@ Configuration:
       world2_nether:
         Enabled: false
         PerBlocksFromSpawn: 100
+    ScalingEquations:
+      Health: V * ((1.05)^(L-1))
+      Damage: V * ((1.05)^(L-1))
     DefaultLevelModifiers:
       Health: 0.1
       Armor: 0
@@ -46,31 +49,31 @@ Configuration:
       KnockbackResistance: 0
       Power: 0
   RandomSpawning:
+    DisableVanillaSpawns: false
     GenerateSpawnPoints: true
     MaxMobsPerChunk: 80
     SpawnRadiusPerPlayer: 64
-    SpawnRadiusPerPlayerY: 32
+    SpawnRadiusPerPlayerY: 64
     DespawnLazyRandomMobs: true
+    MaxGenerationTime: 20
     PointsPerSecond:
       Land: 10
-      Air: 1
-      Sea: 0
+      Air: 0
+      Sea: 1
       Lava: 0
-      Ground: 1
+      Ground: 10
   Compatibility:
     Heroes:
       Enabled: true
-      ShowXPMessage: true
-      XPMessageFormat: You receive <drops.xp> experience for slaying <mob.name>
     McMMO:
       Enabled: true
       ShowXPMessage: true
-      XPMessageFormat: You receive <drops.xp> experience for slaying <mob.name>
+      XPMessageFormat: '&7You receive <drop.amount> experience for slaying <dropper.name>'
     SkillAPI:
       Enabled: true
       ShowXPMessage: true
-      XPMessageFormat: You receive <drops.xp> experience for slaying <mob.name>
+      XPMessageFormat: '&7You receive <drop.amount> experience for slaying <dropper.name>'
     Vault:
       Enabled: true
       ShowMoneyMessage: true
-      MoneyMessageFormat: <mob.name> dropped <drops.money> gold!
+      MoneyMessageFormat: '&7You receive <drop.amount> currency for slaying <dropper.name>'

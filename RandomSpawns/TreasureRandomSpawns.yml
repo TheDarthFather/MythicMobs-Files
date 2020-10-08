@@ -1,6 +1,6 @@
-ProsperusTreasure:
+worldTreasure:
   Type: GoblinRedstone,GoblinMoney,GoblinLapis,GoblinExp,GoblinSand,GoblinPrismarine
-  Worlds: prosperus
+  Worlds: world
   Chance: 0.001
   Action: REPLACE
   Conditions:
@@ -24,18 +24,18 @@ AvenfeldTreasure:
   - outside true
 NetherTreasure:
   Type: GoblinRedstone,GoblinMoney,GoblinLapis,GoblinExp,GoblinSand,GoblinPrismarine
-  Worlds: prosperus_nether
+  Worlds: world_nether
   Chance: 0.005
   Action: REPLACE
 EndTreasure:
   Type: GoblinRedstone,GoblinMoney,GoblinLapis,GoblinExp,GoblinSand,GoblinPrismarine
-  Worlds: prosperus_the_end
+  Worlds: world_the_end
   Chance: 0.005
   Action: REPLACE
 
 CowSpawns:
   Type: Cow
-  Worlds: prosperus
+  Worlds: world
   Chance: 1
   Action: ADD
   conditions:

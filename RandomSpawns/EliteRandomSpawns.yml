@@ -1,17 +1,18 @@
-ProsperusElites:
-    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Arachnid
-    Worlds: prosperus
-    Chance: 0.0030
+worldElites:
+#    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Arachnid
+    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Dretch,Banshee,BouncySlime8,Inferno,Arachnid,WindMageElite,FireMageElite
+    Worlds: world
+    Chance: 0.01
     Action: REPLACE
     Conditions:
-    - outside true
-    - distancefromspawn{distance=>1000} true
+#    - outside true
+#    - distancefromspawn{distance=>1000} true
 #    - region{r=dawnslanding} false
 #    - lightlevelbelow 10
     - onblock STATIONARY_WATER,WATER false
 SlimeSpawner:
     Type: BouncySlime8
-    Worlds: prosperus
+    Worlds: world
     Chance: 0.01
     Action: REPLACE
     Conditions:
@@ -42,19 +43,19 @@ UltimatusElites:
     - outside true
 NetherElites:
     Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Dretch,Banshee,BouncySlime8,Inferno,Arachnid,WindMageElite,FireMageElite
-    Worlds: prosperus_nether
-    Chance: 0.01
+    Worlds: world_nether
+    Chance: 0.02
     Action: REPLACE
 #NetherGhastGhastPhantom:
 #    Type: GhastPhantom
-#    Worlds: prosperus_nether
+#    Worlds: world_nether
 #    Chance: 0.0005
 #    Action: ADD
 #    Conditions:
 #    - blocktype{t=air} true
 EndElites:
     Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Dretch,Banshee,BouncySlime8,Inferno,Arachnid,WindMageElite,FireMageElite
-    Worlds: prosperus_the_end
+    Worlds: world_the_end
     Chance: 0.075
     Action: REPLACE
 AvenfeldElites:

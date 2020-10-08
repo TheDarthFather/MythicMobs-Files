@@ -1,6 +1,6 @@
 ChampionHeavens:
   Type: Umbra,Toxus
-  Worlds: heavens,prosperus_the_end,avenfeld
+  Worlds: world,world_nether,world_the_end
   Chance: 0.0000000001
   Action: REPLACE
   Conditions:
