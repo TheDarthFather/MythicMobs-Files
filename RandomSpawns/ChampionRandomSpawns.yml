@@ -5,3 +5,4 @@ ChampionHeavens:
   Action: REPLACE
   Conditions:
   - outside true
+  - onground{} true
