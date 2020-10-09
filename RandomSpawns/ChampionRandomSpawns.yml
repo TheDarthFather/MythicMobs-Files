@@ -5,4 +5,5 @@ ChampionHeavens:
   Action: REPLACE
   Conditions:
   - outside true
-  - onground{} true
+  - onblock{m=WATER} false
+  - inblock{block=WATER} false

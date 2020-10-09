@@ -10,7 +10,8 @@ worldElites:
 #    - region{r=dawnslanding} false
 #    - lightlevelbelow 10
 #    - onblock STATIONARY_WATER,WATER false
-     - onground{} true
+     - onblock{m=WATER} false
+     - inblock{block=WATER} false
 SlimeSpawner:
     Type: BouncySlime8
     Worlds: world
