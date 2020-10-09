@@ -59,7 +59,7 @@ Configuration:
     PointsPerSecond:
       Land: 10
       Air: 0
-      Sea: 1
+      Sea: 0
       Lava: 0
       Ground: 10
   Compatibility:

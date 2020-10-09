@@ -273,3 +273,16 @@ RedstoneCache:
     - ConsumeHeldItem @Self ~onUse
     Options:
         Color: 255,0,0
+WindMageElytra:
+    Id: elytra
+    Data: 0
+    Display: "&dCultist Wind Mage's Elytra"
+    Lore:
+    - '&d&oElite'
+    - '&fA cultist wind mage once owned this'
+    - '&felytra.'
+    Attributes:
+        Chest:
+            Health: 4
+            Armor: 4
+            ArmorToughness: 2

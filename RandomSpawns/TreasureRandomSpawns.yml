@@ -5,23 +5,6 @@ worldTreasure:
   Action: REPLACE
   Conditions:
   - outside true
-  - region{r=dawnslanding} false
-#  - lightlevelbelow 10
-HeavensTreasure:
-  Type: GoblinRedstone,GoblinMoney,GoblinLapis,GoblinExp,GoblinSand,GoblinPrismarine
-  Worlds: heavens,ultimatus
-  Chance: 0.005
-  Action: REPLACE
-  Conditions:
-  - outside true
-#  - lightlevelbelow 10  
-AvenfeldTreasure:
-  Type: GoblinRedstone,GoblinMoney,GoblinLapis,GoblinExp,GoblinSand,GoblinPrismarine
-  Worlds: avenfeld
-  Chance: 0.005
-  Action: REPLACE
-  Conditions:
-  - outside true
 NetherTreasure:
   Type: GoblinRedstone,GoblinMoney,GoblinLapis,GoblinExp,GoblinSand,GoblinPrismarine
   Worlds: world_nether
@@ -32,12 +15,3 @@ EndTreasure:
   Worlds: world_the_end
   Chance: 0.005
   Action: REPLACE
-
-CowSpawns:
-  Type: Cow
-  Worlds: world
-  Chance: 1
-  Action: ADD
-  conditions:
-  - outside true
-  - region{r=dawnslanding} true

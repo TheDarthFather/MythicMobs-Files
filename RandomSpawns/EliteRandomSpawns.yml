@@ -1,15 +1,11 @@
 worldElites:
 #    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Arachnid
-    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Dretch,Banshee,BouncySlime8,Inferno,Arachnid,WindMageElite,FireMageElite
+    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Dretch,Banshee,Inferno,Arachnid,WindMageElite,FireMageElite
     Worlds: world
     Chance: 0.01
     Action: REPLACE
     Conditions:
 #    - outside true
-#    - distancefromspawn{distance=>1000} true
-#    - region{r=dawnslanding} false
-#    - lightlevelbelow 10
-#    - onblock STATIONARY_WATER,WATER false
      - onblock{m=WATER} false
      - inblock{block=WATER} false
 SlimeSpawner:
@@ -19,53 +15,14 @@ SlimeSpawner:
     Action: REPLACE
     Conditions:
     - outside true
-    - region{r=dawnslanding} false
     - biome{b=SWAMP} true
-HeavensElites:
-    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Banshee,BouncySlime8,Inferno,Arachnid,WindMageElite,FireMageElite
-    Worlds: heavens
-    Chance: 0.05
-    Action: REPLACE
-    Conditions:
-    - outside true
-#HeavensGhastPhantom:
-#    Type: GhastPhantom
-#    Worlds: heavens
-#    Chance: 0.0005
-#    Action: ADD
-#    Conditions:
-#    - blocktype{t=air} true
-#    - lightlevelbelow 10
-UltimatusElites:
-    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Banshee,BouncySlime8,WindMageElite,FireMageElite
-    Worlds: ultimatus
-    Chance: 0.05
-    Action: REPLACE
-    Conditions:
-    - outside true
 NetherElites:
-    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Dretch,Banshee,BouncySlime8,Inferno,Arachnid,WindMageElite,FireMageElite
+    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Dretch,Banshee,BouncySlime8,Inferno,Arachnid,WindMageElite,FireMageElite,GhastPhantom
     Worlds: world_nether
     Chance: 0.02
     Action: REPLACE
-#NetherGhastGhastPhantom:
-#    Type: GhastPhantom
-#    Worlds: world_nether
-#    Chance: 0.0005
-#    Action: ADD
-#    Conditions:
-#    - blocktype{t=air} true
 EndElites:
-    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Dretch,Banshee,BouncySlime8,Inferno,Arachnid,WindMageElite,FireMageElite
+    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Dretch,Banshee,BouncySlime8,Inferno,Arachnid,WindMageElite,FireMageElite,GhastPhantom
     Worlds: world_the_end
     Chance: 0.075
     Action: REPLACE
-AvenfeldElites:
-    Type: SkeletalDarkKnight,Lich,BloodWitch,Sharpshooter,Occultist,Banshee,Arachnid,WindMageElite,FireMageElite
-    Worlds: avenfeld
-    Chance: 0.05
-    Action: REPLACE
-    Conditions:
-    - outside true
-#    - lightlevelbelow 10
-    - onblock STATIONARY_WATER,WATER false

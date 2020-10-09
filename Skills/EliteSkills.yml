@@ -373,29 +373,99 @@ RallyElite:
     - delay 10
     - rally{types=Skeleton,Creeper,Zombie,SkeletalRogue,LesserDrow,SkeletalArcher,Occultist,Banshee,Phantom,Pig_Zombie,Arachnid,Lich,Enderman,LesserShade;radius=50;ot=true} @PlayersInRadius{r=40}
     - GCD{ticks=160}
-#ConjureSwordsElite:
-#    Cooldown: 120
-#    Conditions:
-#    - offgcd
-#    Skills:
-#    - GCD{ticks=160}
-#    - message{m="<mob.name>&f<&co> Allies, arm yourselves!"} @PlayersInRadius{r=40}
-#    - delay 10
-#    - equip{item=Diamond_Sword:0} @MobsInRadius{r=20}
-
-GoblinSummonElite:
-    Cooldown: 20
+    
+    #WindMage
+    
+GustlaunchTargetElite:
+    Cooldown: 45
+    Conditions:
+    - targetwithin{d=100}
+    - offgcd
+    Skills:
+    - GCD{ticks=160}
+    - message{m="&cThe Cultist Wind Mage focuses on you, and you hear a rush of wind approaching..."} @target
+    - delay 60
+    - throw{velocity=0.5;velocityY=20} @target
+    - GCD{ticks=160}
+GustlaunchRadiusElite:
+    Cooldown: 15
     Conditions:
     - offgcd
     Skills:
-    - gcd{ticks=100}
-    - randomskill{skills=GoblinSummonCaretaker,GoblinSummonTosser,GoblinSummonRusher;repeat=3;repeatinterval=10} @self
-GoblinSummonTosser:
+    - GCD{ticks=160}
+    - message{m="&cThe Cultist Wind Mage concentrates, and you feel winds rushing towards you from all sides..."} @PIR{r=20}
+    - delay 60
+    - throw{velocity=0.5;velocityY=20} @PIR{r=20}
+    - GCD{ticks=160}
+GustleapElite:
+    Cooldown: 10
     Skills:
-    - summon{type=GoblinTosser;amount=1;radius=8;ctt=true;itt=true} @self
-GoblinSummonCaretaker:
+    - message{m="&cThe Cultist Wind Mage whips up the wind around them to leap forward!"}
+    - jump{velocity=20} @self
+    - leap{velocity=100} @target
+ShockwaveElite:
+    Cooldown: 30
+    Conditions:
+    - offgcd
     Skills:
-    - summon{type=GoblinCaretaker;amount=1;radius=8;ctt=true;itt=true} @self
-GoblinSummonRusher:
+    - GCD{ticks=160}
+    - message{m="&cThe Cultist Wind Mage begins to channel winds, forcing them down from the sky!"}
+    - delay 60
+    - throw{velocity=40;velocityY=6} @PIR{r=20}
+    - GCD{ticks=160}
+WindboltElite:
+    Cooldown: 2
     Skills:
-    - summon{type=GoblinRusher;amount=1;radius=8;ctt=true;itt=true} @self
+    - projectile{onTick=WindboltElite-Tick;onHit=WindboltElite-Hit;v=30;i=1;hR=1.5;vR=1.5;syo=+8;sfo=-.5;mr=100;d=800} @target
+WindboltElite-Tick:
+    Skills:
+    - effect:particles{p=cloud;amount=4;speed=0;hS=0.1;vS=0.1} @origin
+WindboltElite-Hit:
+    Skills:
+    - damage{a=12}
+    - throw{velocity=10;velocityY=10}
+    - effect:particles{p=cloud;amount=20;speed=0;hS=1.0;vS=1.0} @origin
+
+#FireMage
+FireboltElite:
+    Cooldown: 2
+    Skills:
+    - projectile{onTick=FireboltElite-Tick;onHit=FireboltElite-Hit;v=30;i=1;hR=1.5;vR=1.5;syo=+8;sfo=-.5;mr=100;d=800} @target
+FireboltElite-Tick:
+    Skills:
+    - effect:particles{p=flame;amount=4;speed=0;hS=0.1;vS=0.1} @origin
+    - effect:particles{p=lava;amount=4;speed=0;hS=0.1;vS=0.1} @origin
+FireboltElite-Hit:
+    Skills:
+    - damage{a=14}
+    - ignite{ticks=100}
+    - effect:particles{p=flame;amount=10;speed=0;hs=2.0;vs=2.0} @origin
+    - effect:particles{p=lava;amount=10;speed=0;hs=2.0;vs=2.0} @origin
+
+HeatwaveElite:
+    Cooldown: 30
+    Conditions:
+    - offgcd
+    Skills:
+    - GCD{ticks=160}
+    - message{m="&cThe Cultist Fire Mage is concentrating fire magic..."}
+    - delay 60
+    - ignite{ticks=200} @PIR{r=20}
+    - GCD{ticks=160}
+
+SearingFlamesElite:
+    Cooldown: 45
+    Conditions:
+    - offgcd
+    Skills:
+    - GCD{ticks=160}
+    - message{m="&cThe Cultist Fire Mage is channeling searing flames!"}
+    - delay 60
+    - skill{s=SearingFlames-ExtraDamage} @PIR{r=20}
+    - ignite{ticks=100} @PIR{r=20}
+    - GCD{ticks=160}
+SearingFlames-ExtraDamage:
+    TargetConditions:
+    - isburning{action=true}
+    Skills:
+    - damage{a=20}

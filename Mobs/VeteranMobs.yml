@@ -22,7 +22,6 @@ SkeletalRogue:
     Skills:
     - skill{s=BleedingVeteran} ~onAttack 0.1
     - skill{s=ShadowstepVeteran} >0 0.2
-#    - skill{s=SuperChargeDeathVeteran} @ThreatTablePlayers ~onDeath
     Modules:
         ThreatTable: true
 LesserWight:
@@ -44,7 +43,6 @@ LesserWight:
         PreventItemPickup: true
     Skills:
     - skill{s=BleedingVeteran} ~onAttack 0.1
-#    - skill{s=SuperChargeDeathVeteran} @ThreatTablePlayers ~onDeath
     Modules:
         ThreatTable: true
 LesserShade:
@@ -67,7 +65,6 @@ LesserShade:
     - skill{s=BleedingVeteran} ~onAttack 0.1
     - skill{s=BlindVeteran} @PIR{r=40} >0 0.2
     - skill{s=PullVeteran} @PIR{r=40} >0 0.2
-#    - skill{s=SuperChargeDeathVeteran} @ThreatTablePlayers ~onDeath
     Modules:
         ThreatTable: true
 LesserDarkSprite:
@@ -104,7 +101,6 @@ LesserDrow:
     - skill{s=LeapVeteran} @PIR{r=40} >0 0.2
     - skill{s=WitheringGraspVeteran} ~onAttack 0.1
     - skill{s=ShadowstepVeteran} >0 0.2
-#    - skill{s=SuperChargeDeathVeteran} @ThreatTablePlayers ~onDeath
     Equipment:
     - iron_helmet:4
     - iron_chestplate:3
@@ -136,7 +132,6 @@ SkeletalArcher:
     - skill{s=CripplingShotVeteran} @PIR{r=40} >0 0.2
     - skill{s=BurningShotVeteran} @PIR{r=40} >0 0.2
     - shoot{type=ARROW;velocity=10;damage=6} @Target ~onTimer:60
-#    - skill{s=SuperChargeDeathVeteran} @ThreatTablePlayers ~onDeath
     Equipment:
     - iron_helmet:4
     - iron_chestplate:3
@@ -178,5 +173,3 @@ VeteranTableTester:
         PreventItemPickup: true
     Modules:
         ThreatTable: true
-#Drider
-#LesserGhoul

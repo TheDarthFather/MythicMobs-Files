@@ -5,18 +5,8 @@ ProsperusVeterans:
     Action: REPLACE
     Priority: 10
     Conditions:
-#    - distancefromspawn{distance=>1000} true
-#    - region{r=dawnslanding} false
-#    - onblock STATIONARY_WATER,WATER false
      - onblock{m=WATER} false
      - inblock{block=WATER} false
-HeavensVeterans:
-    Type: SkeletalRogue,LesserWight,LesserShade,LesserDrow,SkeletalArcher,AbsoluteExplodyBoy
-    Worlds: heavens,ultimatus
-    Chance: 0.10
-    Action: REPLACE
-    Conditions:
-    - onblock STATIONARY_WATER,WATER false
 NetherVeterans:
     Type: SkeletalRogue,LesserWight,LesserShade,LesserDrow,SkeletalArcher,AbsoluteExplodyBoy
     Worlds: world_nether
@@ -27,10 +17,4 @@ EndVeterans:
     Worlds: world_the_end
     Chance: 0.20
     Action: REPLACE
-AvenfeldVeterans:
-    Type: SkeletalRogue,LesserWight,LesserShade,LesserDrow,SkeletalArcher,AbsoluteExplodyBoy
-    Worlds: avenfeld
-    Chance: 0.10
-    Action: REPLACE
-    Conditions:
-    - onblock STATIONARY_WATER,WATER false
+
